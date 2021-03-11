@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <title>Hello World!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+</head>
+<body class="has-background-light">
+
+    <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+        <div class="navbar-start">
+            <div class="navbar-brand">
+                <a class="navbar-item is-size-2">Random Photo</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column">
+                    <div class="card">
+                        <header class="card-header">
+                        <p class="card-header-title">
+                            <h1 class="title">Elección de fotos aleatorias</h1>
+                        </p>
+                        </header>
+                        <div class="card-content">
+                            <div class="content">
+                                La API Lorem Pixum provee fotografías aleatorias con efectos sobre
+                                escala de grises y difuminados.
+                                <hr>
+                                <form id="form" method="get">
+                                    <div class="field">
+                                    <label class="label is-primary">Escoje Efecto</label>
+                                    <div class="control">
+                                        <div class="select">
+                                        <select name="effect" id="effect">
+                                            <option value="g">Escala de grises</option>
+                                            <option value="b">Difuminado</option>
+                                        </select>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <button class="button">Ver imagen</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <figure class="image is-4by3">
+                        <div id="img"></div>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="app.js"></script>
+</body>
+</html>
